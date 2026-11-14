@@ -41,3 +41,19 @@ Documentation and GitHub
 - git add git_commands.txt — Stage corrections to this command record.
 - git commit -m "Correct GitHub command documentation" — Record the corrected command descriptions.
 - git push origin main — Publish the command-documentation correction.
+
+Final audit
+- git --version — Confirm the installed Git version.
+- git config user.name — Inspect the configured author name.
+- git config user.email — Inspect the configured author email locally.
+- git branch -avv — Confirm local and remote branch pointers and upstreams.
+- git show --stat --oneline <commit> — Inspect the changed files in each required commit.
+- git rev-list --parents -n 1 6c3c84b — Confirm that the merge commit has two parents.
+- git diff 09348c3 036a303 -- index.html — Confirm the revert restored the earlier home page.
+- git ls-files — Check that only the intended project files are tracked.
+- git check-ignore -v --no-index sample.log temp/sample.txt — Recheck both ignore patterns without recreating sample files.
+- git cat-file -p 036a303 — Inspect the genuine revert commit metadata.
+- git -C git-github-workflow-assignment status --short --branch — Check repository status from the assignment workspace.
+- git add git_commands.txt — Stage this audit supplement.
+- git commit -m "Complete command audit" — Record the full command documentation.
+- git push origin main — Publish the audit supplement.
