@@ -31,8 +31,13 @@ Ignore and undo
 Documentation and GitHub
 - git add git_commands.txt — Stage this command record.
 - git commit -m "Document Git workflow commands" — Add it to the repository.
-- git remote add origin <actual URL> — Connect to the newly created public GitHub repository (performed by gh repo create).
-- git push -u origin main — Publish main and set its upstream (performed by gh repo create --push).
+- gh repo create git-github-workflow-assignment --public --source=. --remote=origin --push — Create the public repository, configure origin, and push main.
 - git push -u origin feature — Publish feature and set its upstream.
 - git remote -v — Confirm the configured public remote URL.
 - git ls-remote --heads origin — Verify both remote branch references.
+- gh repo view Aparna-Singha/git-github-workflow-assignment --json url,visibility,defaultBranchRef — Verify the public URL and default branch.
+- gh api repos/Aparna-Singha/git-github-workflow-assignment/contents — Verify the remote file list.
+- gh api repos/Aparna-Singha/git-github-workflow-assignment/commits — Verify remote commit messages.
+- git add git_commands.txt — Stage corrections to this command record.
+- git commit -m "Correct GitHub command documentation" — Record the corrected command descriptions.
+- git push origin main — Publish the command-documentation correction.
