@@ -1,0 +1,38 @@
+Git commands used in this assignment
+
+Local setup and commits
+- git init -b main — Initialize the local repository with main as its primary branch.
+- git branch --show-current — Confirm the active branch after initialization and switches.
+- git add index.html about.html — Stage the two original web pages.
+- git commit -m "Create study notes website" — Record the initial website.
+- git log -1 --oneline — Verify the latest commit after the initial, feature, and temporary commits.
+- git add index.html — Stage the home-page update and, later, the temporary tip.
+- git commit -m "Add study goal guidance to home page" — Record the second change.
+- git log -2 --oneline — Verify two distinct initial commits.
+
+Branch and merge
+- git branch feature — Create the required feature branch.
+- git switch feature — Make feature active.
+- git add about.html — Stage the study-routine change.
+- git commit -m "Add study routine on about page" — Record feature work.
+- git switch main — Return to the primary branch.
+- git merge --no-ff feature -m "Merge feature study routine" — Integrate feature with a merge commit.
+- git log --all --graph --oneline --decorate — Verify commits and branch relationship.
+
+Ignore and undo
+- git check-ignore -v sample.log temp/sample.txt — Verify both ignore patterns with temporary sample files.
+- git status --short — Check that ignored files are absent from the untracked list.
+- git add .gitignore — Stage the ignore rules.
+- git commit -m "Ignore logs and temporary files" — Record the ignore configuration.
+- git commit -m "Add temporary fixed study tip" — Record an additional change to undo.
+- git revert --no-edit HEAD — Reverse that change with a new commit.
+- git status --short --branch — Check the branch and working-tree state.
+
+Documentation and GitHub
+- git add git_commands.txt — Stage this command record.
+- git commit -m "Document Git workflow commands" — Add it to the repository.
+- git remote add origin <actual URL> — Connect to the newly created public GitHub repository (performed by gh repo create).
+- git push -u origin main — Publish main and set its upstream (performed by gh repo create --push).
+- git push -u origin feature — Publish feature and set its upstream.
+- git remote -v — Confirm the configured public remote URL.
+- git ls-remote --heads origin — Verify both remote branch references.
